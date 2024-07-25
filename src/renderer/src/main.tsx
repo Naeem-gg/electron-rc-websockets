@@ -3,6 +3,7 @@ import './assets/main.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { NextUIProvider } from '@nextui-org/react'
 import App from './App'
 
 const router = createHashRouter([
@@ -13,6 +14,8 @@ const router = createHashRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <NextUIProvider>
+      <RouterProvider router={router} />
+    </NextUIProvider>
   </React.StrictMode>
 )
