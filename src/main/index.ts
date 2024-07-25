@@ -50,7 +50,7 @@ app.whenReady().then(() => {
   })
 
   // IPC test
-  ipcMain.on('ping', () => console.log('naeem'))
+  ipcMain.on('ping', async () => console.log('hello world'))
 
   createWindow()
 
